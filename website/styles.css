@@ -1,0 +1,39 @@
+body {
+    background-color: 	#FAF9F6;
+}
+
+h1 {
+    color: #25693E;
+    font-size: 9em;
+    font-family: 'Playfair Display', serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #658567;
+  }
+  li {
+    display: inline;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    padding: 10px 15px;
+  }
+  a {
+    color: #658567;
+    text-decoration-style: dotted;
+    text-underline-position: under;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+  a:hover {
+    text-decoration-style: solid;
+  }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}

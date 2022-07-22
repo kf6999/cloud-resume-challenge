@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+</style>
+        
+<head>
+    <meta charset="UTF-8">
+    <title>Kenneth Fan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+</head>
+
+<body>
+    <div class="container">
+        <div class="centered-element">
+            <h1 id="title"></h1>
+            <ul>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://kennethfanresume.s3.amazonaws.com/ResumeKennethFan.pdf">Resume</a></li>
+                <li><a target="_blank" rel="noopener noreferrer"href="https://github.com/kf6999">GitHub</a></li>
+                <li><a target="_blank" rel="noopener noreferrer"href="mailto:kf6999@rit.edu">Contact</a></li>
+                <li>Visitors: <span id="stats"></span></li>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>
+<script src="script.js"></script>
+<script>
+    fetch(' https://m4m8aqxw84.execute-api.us-east-1.amazonaws.com/Prod/put')
+        .then(() => fetch(' https://m4m8aqxw84.execute-api.us-east-1.amazonaws.com/Prod/get'))
+        .then(response => response.json())        .then((data) => {
+        document.getElementById('stats').innerText = data.count
+    })
+</script>
