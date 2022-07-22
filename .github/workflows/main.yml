@@ -1,7 +1,7 @@
 name: main
 on: push
 env:
-  GO_VERSION: 1.18x
+  GO_VERSION: 1.16x
 jobs:
   test-infra:
     runs-on: ubuntu-latest
