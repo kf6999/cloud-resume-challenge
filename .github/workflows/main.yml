@@ -1,7 +1,7 @@
 name: main
 on: push
 env:
-  GO_VERSION: ${{ env.GO_VERSION }}
+  GO_VERSION: '1.18.4'
 jobs:
   test-infra:
     runs-on: ubuntu-latest
