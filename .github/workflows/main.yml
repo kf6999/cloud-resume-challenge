@@ -1,7 +1,7 @@
 name: main
 on: push
 env:
-  GO_VERSION: 1.16x
+  GO_VERSION: ${{ env.GO_VERSION }}
 jobs:
   test-infra:
     runs-on: ubuntu-latest
