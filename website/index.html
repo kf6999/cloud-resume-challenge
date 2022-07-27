@@ -25,11 +25,22 @@
     </div>
     </body>
 </html>
-<script src="script.js"></script>
 <script>
     fetch(' https://m4m8aqxw84.execute-api.us-east-1.amazonaws.com/Prod/put')
         .then(() => fetch(' https://m4m8aqxw84.execute-api.us-east-1.amazonaws.com/Prod/get'))
         .then(response => response.json())        .then((data) => {
         document.getElementById('stats').innerText = data.count
     })
+    var i = 0;
+    var txt = 'Kenneth Fan';
+    var speed = 80;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("title").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    window.onload = typeWriter;
 </script>

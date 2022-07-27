@@ -27,6 +27,25 @@ Resources:
       KeySchema:
       - AttributeName: ID
         KeyType: HASH
+  MyDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          TargetOriginId: http://kenneth-fan-website.s3-website-us-east-1.amazonaws.com
+          DefaultTTL: 0
+          MinTTL: 0
+          MaxTTL: 0
+          ForwardedValues:
+            QueryString: false
+        Origins:
+        - DomainName: kenneth-fan-website.s3-website-us-east-1.amazonaws.com
+          Id: http://kenneth-fan-website.s3-website-us-east-1.amazonaws.com
+          CustomOriginConfig:
+            OriginProtocolPolicy: match-viewer
+        Enabled: 'true'
+        DefaultRootObject: index.html
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
